@@ -1,43 +1,25 @@
-Stages:
-  - Name: Source
-    Actions:
-      - Name: SourceAction
-        ActionTypeId:
-          Category: Source
-          Owner: ThirdParty
-          Version: 1
-          Provider: GitHub
-        Configuration:
-          Owner: owner
-          Repo: repo
-          Branch: branch
-          OAuthToken: 'my-github-token'
-        OutputArtifacts:
-          - Name: SourceOutput
-  - Name: Build
-    Actions:
-      - Name: BuildAction
-        ActionTypeId:
-          Category: Build
-          Owner: AWS
-          Version: 1
-          Provider: CodeBuild
-        Configuration:
-          ProjectName: 'MyCodeBuildProject'
-        InputArtifacts:
-          - Name: SourceOutput
-        OutputArtifacts:
-          - Name: BuildOutput
-  - Name: Deploy
-    Actions:
-      - Name: DeployAction
-        ActionTypeId:
-          Category: Deploy
-          Owner: AWS
-          Version: 1
-          Provider: CodeDeploy
-        Configuration:
-          ApplicationName: 'MyCodeDeployApp'
-          DeploymentGroupName: 'MyDeploymentGroup'
-        InputArtifacts:
-          - Name: BuildOutput
+name: CI
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: 14
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Run Playwright tests
+        run: npm test

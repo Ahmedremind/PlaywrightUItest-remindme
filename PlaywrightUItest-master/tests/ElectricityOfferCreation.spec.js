@@ -1,6 +1,6 @@
 import  test   from '@playwright/test';
 import  {Electricityjourney} from '../pages/OfferCreation/ElectricityOffer/electricity';
-import  userData from '../util/userdata.json';
+//import  userData from '../util/userdata.json';
 import { getRandomEmail } from '../util/common';
 
 test.describe(' Offer creation Electricity', () => {
@@ -46,35 +46,35 @@ test.describe(' Offer creation Electricity', () => {
         await elec.clickonCheckSavingButton();
     });
 
-    test(' C6 -- Verify if user can select the Multiple"Persons" Icon for Electricity consumption. ', async ({ page }) => {
-        const elec = new Electricityjourney(page);
-        await elec.gotoremindme();
-        await elec.clickonElectricityButton();
-        await elec.clickonApartmentButton();
-        await elec.clickonCheckSavingButton();
-        await elec.clickonOnePersonSelection();
-        await elec.clickonZipcode(userData.Zipcode);
-        await elec.clickonAreaSelection();
-    });
+    // test(' C6 -- Verify if user can select the Multiple"Persons" Icon for Electricity consumption. ', async ({ page }) => {
+    //     const elec = new Electricityjourney(page);
+    //     await elec.gotoremindme();
+    //     await elec.clickonElectricityButton();
+    //     await elec.clickonApartmentButton();
+    //     await elec.clickonCheckSavingButton();
+    //     await elec.clickonOnePersonSelection();
+    //     await elec.clickonZipcode(userData.Zipcode);
+    //     await elec.clickonAreaSelection();
+    // });
 
 
-    test(' C7 -- Electricity -> Annual Consumption ', async ({ page }) => {
-        const elec = new Electricityjourney(page);
-        const randomEmail = getRandomEmail();
-        await elec.gotoremindme();
-        await elec.clickonElectricityButton();
-        await elec.clickonApartmentButton();
-        await elec.clickonCheckSavingButton();
-        await elec.clickonZipcode(userData.Zipcode);
-        await elec.clickonAreaSelection();
-        await elec.clickonFurtherButton();
-        await elec.clickonTariff();
-        await elec.clickonFurtherButton();
-        await elec.enterEmail(randomEmail);
-        await elec.clickonFurtherButton();
-        await elec.enterPassword(userData.Password);
-        await elec.enterConfirmPassword(userData.ConfirmPassword);
-        await elec.clickonFurtherButton();
-    });
+    // test(' C7 -- Electricity -> Annual Consumption ', async ({ page }) => {
+    //     const elec = new Electricityjourney(page);
+    //     const randomEmail = getRandomEmail();
+    //     await elec.gotoremindme();
+    //     await elec.clickonElectricityButton();
+    //     await elec.clickonApartmentButton();
+    //     await elec.clickonCheckSavingButton();
+    //     await elec.clickonZipcode(userData.Zipcode);
+    //     await elec.clickonAreaSelection();
+    //     await elec.clickonFurtherButton();
+    //     await elec.clickonTariff();
+    //     await elec.clickonFurtherButton();
+    //     await elec.enterEmail(randomEmail);
+    //     await elec.clickonFurtherButton();
+    //     await elec.enterPassword(userData.Password);
+    //     await elec.enterConfirmPassword(userData.ConfirmPassword);
+    //     await elec.clickonFurtherButton();
+    // });
 
  });

@@ -25,5 +25,5 @@ jobs:
         run: npm install
         working-directory: PlaywrightUItest-master
       - name: Run Playwright tests
-        run: npm test
+        run: npm Playwright test
         working-directory: PlaywrightUItest-master/tests

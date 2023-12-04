@@ -1,6 +1,6 @@
 import { test } from '@playwright/test';
 import { LoginPage } from '../pages/login';
-import userData from '../util/userdata.json';
+import {userData} from '../util/userdata.json';
 import { getRandomEmail } from '../util/common';
 
 

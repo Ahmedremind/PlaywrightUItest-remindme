@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
 
     env:
-      ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION: true
+      ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION: false
 
     steps:
       - name: Checkout code
@@ -23,6 +23,6 @@ jobs:
 
       - name: Install dependencies
         run: npm install
-
+        working-directory: /home/PlaywrightUItest-remindme/
       - name: Run Playwright tests
         run: npm test

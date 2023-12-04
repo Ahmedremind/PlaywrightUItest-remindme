@@ -1,6 +1,6 @@
 import { test } from '@playwright/test';
 import { LoginPage } from '../pages/login';
-import {userdata} from '../util/userdata.json';
+import userData from '../util/userdata.json';
 import { getRandomEmail } from '../util/common';
 
 
@@ -8,7 +8,7 @@ test.describe(' Login Sceanrio', () => {
     test(' Verify if User has valid email and password', async ({ page }) => {
         const Login = new LoginPage(page);
         await Login.gotoremindme();
-        await Login.userLogin(userdata.Email,userdata.Password)
+        await Login.userLogin(userData.Email,userData.Password)
     });
 
     test(' Verify if User has invalid email', async ({ page }) => {

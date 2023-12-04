@@ -11,6 +11,8 @@
     "Year" : "1992",
     "StreetName" : "Test street name",
     "House" : "14356",
-    "Iban" : "DE89 3704 0044 0532 0130 00"
+    "Iban" : "DE89 3704 0044 0532 0130 00",
+    "invalidEmail" : "ahmed13426.com",
+    "invalidPass" : "testing1237281382130210382198309123"
    }
   

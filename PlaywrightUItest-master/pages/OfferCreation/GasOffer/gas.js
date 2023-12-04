@@ -82,10 +82,10 @@ export class Gassjourney {
         await this.home_enterEmail.fill(randomEmail);
     }
 
-    async enterPassword(password){
-        await this.home_password.fill(password);
+    async enterPassword(Password){
+        await this.home_password.fill(Password);
     }
-    async enterConfirmPassword(confirmPassword){
-        await this.home_passwordConfirm.fill(confirmPassword);
+    async enterConfirmPassword(ConfirmPassword){
+        await this.home_passwordConfirm.fill(ConfirmPassword);
     }
 }

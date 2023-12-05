@@ -20,7 +20,7 @@ To leverage this framework for your testing endeavors, follow these steps:
    ```
 
 2. **Check Node.js Version:**
-   Verify that Node.js is installed on your system by running:
+   Verify that Node.js a is installed on your system by running:
    ```bash
    node -v
    ```

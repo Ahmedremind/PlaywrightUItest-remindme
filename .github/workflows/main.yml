@@ -19,11 +19,12 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '21' 
+          node-version: '16'  # Adjust the Node.js version if needed
 
       - name: Install dependencies
         run: npm install
         working-directory: PlaywrightUItest-remindme
+
       - name: Run Playwright tests
         run: npm test
         working-directory: PlaywrightUItest-remindme/tests

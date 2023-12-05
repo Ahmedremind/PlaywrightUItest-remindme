@@ -15,7 +15,8 @@ export class LoginPage {
 
     async gotoremindme(){
         const { baseURL } = this.page.context()._options;
-        await this.page.goto(`${baseURL}`);
+       // await this.page.goto(`${baseURL}`);
+        await this.page.goto('https://www.remind.me/');
         
     }
 

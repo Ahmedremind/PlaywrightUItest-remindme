@@ -29,7 +29,8 @@ export class Electricityjourney {
 
     async gotoremindme(){
         const { baseURL } = this.page.context()._options;
-        await this.page.goto(`${baseURL}`);
+        //await this.page.goto(`${baseURL}`);
+        await this.page.goto('https://www.remind.me/');
         // Function to accept cookies
             const acceptCookiesButton = await this.page.waitForSelector('(//button[text()="Alle Akzeptieren"])');
             if (acceptCookiesButton) {

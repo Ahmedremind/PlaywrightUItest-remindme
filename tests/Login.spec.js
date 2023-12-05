@@ -14,7 +14,6 @@ test.describe(' Login Sceanrio', () => {
     test(' Verify if User has invalid email', async ({ page }) => {
         const Login = new LoginPage(page);
         await Login.gotoremindme();
-        await Login.gotoremindme();
         await Login.emailValidation(data.invalidEmail);
     });
 

@@ -44,7 +44,8 @@ export class ExchangeServicesJourney {
     }
     async gotoremindme(){
         const { baseURL } = this.page.context()._options;
-        await this.page.goto(`${baseURL}`);
+        //await this.page.goto(`${baseURL}`);
+        await this.page.goto('https://www.remind.me/')
         await this.loginbutton.click();
         // Function to accept cookies
             const acceptCookiesButton = await this.page.waitForSelector('(//button[text()="Alle Akzeptieren"])');

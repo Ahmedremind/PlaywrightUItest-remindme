@@ -52,7 +52,7 @@ test.describe(' Offer creation Electricity', () => {
         await elec.clickonElectricityButton();
         await elec.clickonApartmentButton();
         await elec.clickonCheckSavingButton();
-        await elec.clickonOnePersonSelection();
+        //await elec.clickonOnePersonSelection();
         await elec.clickonZipcode(data.Zipcode);
         await elec.clickonAreaSelection();
     });

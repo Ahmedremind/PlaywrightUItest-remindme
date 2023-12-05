@@ -53,7 +53,7 @@ test.describe(' Offer creation Gas', () => {
         await gas.clickonGasButton();
         await gas.clickonApartmentButton();
         await gas.clickonCheckSavingButton();
-        await gas.clickonOnePersonSelection();
+        //await gas.clickonOnePersonSelection();
         await gas.clickonZipcode(data.Zipcode);
         await gas.clickonAreaSelection();
     });

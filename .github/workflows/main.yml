@@ -26,4 +26,4 @@ jobs:
         working-directory: Ahmedremind/PlaywrightUItest-remindme/tree/Fixed
       - name: Run Playwright tests
         run: npm test
-        working-directory: PAhmedremind/PlaywrightUItest-remindme/tree/Fixed/tests
+        working-directory: Ahmedremind/PlaywrightUItest-remindme/tree/Fixed/tests

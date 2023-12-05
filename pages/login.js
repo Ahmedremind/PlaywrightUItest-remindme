@@ -22,6 +22,7 @@ export class LoginPage {
     async userLogin(Email, Password){
         await this.loginbutton.click();
         await this.email.fill(Email);
+        await this.clickfurther.click();
         await this.password.fill(Password);
         await this.loginbutton.click();
         //await expect(this.myaccount).toBeVisible();
@@ -30,11 +31,13 @@ export class LoginPage {
     async emailValidation(invalidEmail){
         await this.loginbutton.click();
         await this.email.fill(invalidEmail);
+        await this.clickfurther.click();
         await expect(this.emailError).toBeVisible();
     }
     async passwordValidation(Email, invalidPass){
         await this.loginbutton.click();
         await this.email.fill(Email);
+        await this.clickfurther.click();
         await this.password.fill(invalidPass);
         await expect(this.passError).toBeVisible();
     }

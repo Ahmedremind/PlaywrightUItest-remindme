@@ -23,7 +23,7 @@ jobs:
 
       - name: Install dependencies
         run: npm install
-        working-directory: PlaywrightUItest-remindme
+        working-directory: Ahmedremind/PlaywrightUItest-remindme/tree/Fixed
       - name: Run Playwright tests
         run: npm test
-        working-directory: PlaywrightUItest-remindme/tests
+        working-directory: Ahmedremind/PlaywrightUItest-remindme/tree/Fixed/tests

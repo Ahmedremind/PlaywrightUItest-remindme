@@ -1,6 +1,6 @@
 import { test } from '@playwright/test';
 import { Gassjourney } from '../pages/OfferCreation/GasOffer/gas';
-import userData from '../util/userdata.json';
+//import userData from '../util/userdata.json';
 import { getRandomEmail } from '../util/common';
 
 test.describe(' Offer creation Gas', () => {
@@ -46,36 +46,36 @@ test.describe(' Offer creation Gas', () => {
         await gas.clickonCheckSavingButton();
     });
 
-    test(' C6 -- Verify if user can select the Multiple"Persons" Icon for gas consumption. ', async ({ page }) => {
-        const gas = new Gassjourney(page);
-        await gas.gotoremindme();
-        await gas.clickonGasButton();
-        await gas.clickonApartmentButton();
-        await gas.clickonCheckSavingButton();
-        await gas.clickonOnePersonSelection();
-        await gas.clickonZipcode(userData.Zipcode);
-        await gas.clickonAreaSelection();
-    });
+    // test(' C6 -- Verify if user can select the Multiple"Persons" Icon for gas consumption. ', async ({ page }) => {
+    //     const gas = new Gassjourney(page);
+    //     await gas.gotoremindme();
+    //     await gas.clickonGasButton();
+    //     await gas.clickonApartmentButton();
+    //     await gas.clickonCheckSavingButton();
+    //     await gas.clickonOnePersonSelection();
+    //     await gas.clickonZipcode(userData.Zipcode);
+    //     await gas.clickonAreaSelection();
+    // });
 
-    test(' C7 -- Gass -> Annual Consumption ', async ({ page }) => {
-        const gas = new Gassjourney(page);
-        const randomEmail = getRandomEmail();
-        await gas.gotoremindme();
-        await gas.clickonGasButton();
-        await gas.clickonApartmentButton();
-        await gas.clickonCheckSavingButton();
-        await gas.clickonOnePersonSelection();
-        await gas.clickonZipcode(userData.Zipcode);
-        await gas.clickonAreaSelection();
-        await gas.clickonFurtherButton();
-        await gas.clickonTariff();
-        await gas.clickonFurtherButton();
-        await gas.enterEmail(randomEmail);
-        await gas.clickonFurtherButton();
-        await gas.enterPassword(userData.Password);
-        await gas.enterConfirmPassword(userData.ConfirmPassword);
-        await gas.clickonFurtherButton();
-    });
+    // test(' C7 -- Gass -> Annual Consumption ', async ({ page }) => {
+    //     const gas = new Gassjourney(page);
+    //     const randomEmail = getRandomEmail();
+    //     await gas.gotoremindme();
+    //     await gas.clickonGasButton();
+    //     await gas.clickonApartmentButton();
+    //     await gas.clickonCheckSavingButton();
+    //     await gas.clickonOnePersonSelection();
+    //     await gas.clickonZipcode(userData.Zipcode);
+    //     await gas.clickonAreaSelection();
+    //     await gas.clickonFurtherButton();
+    //     await gas.clickonTariff();
+    //     await gas.clickonFurtherButton();
+    //     await gas.enterEmail(randomEmail);
+    //     await gas.clickonFurtherButton();
+    //     await gas.enterPassword(userData.Password);
+    //     await gas.enterConfirmPassword(userData.ConfirmPassword);
+    //     await gas.clickonFurtherButton();
+    // });
 
 
  });

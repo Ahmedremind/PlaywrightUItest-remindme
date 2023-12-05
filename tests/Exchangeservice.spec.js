@@ -2,7 +2,6 @@ import {test}   from '@playwright/test';
 import {ExchangeServicesJourney} from '../pages/ChangesService/YourOffer';
 import userData from '../util/userdata.json';
 
-
 test.describe(' Change Servic Gas', () => {
     test(' Verify User can create the offer Creation of Gass conenction', async ({ page }) => {
         const exchange = new ExchangeServicesJourney(page);

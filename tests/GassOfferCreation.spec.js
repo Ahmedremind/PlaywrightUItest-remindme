@@ -1,6 +1,6 @@
 import { test } from '@playwright/test';
 import { Gassjourney } from '../pages/OfferCreation/GasOffer/gas';
-//import userData from '../util/userdata.json';
+import userData from '../util/userdata.json';
 import { getRandomEmail } from '../util/common';
 
 test.describe(' Offer creation Gas', () => {

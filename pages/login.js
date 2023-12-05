@@ -7,6 +7,7 @@ export class LoginPage {
         this.page = page;
         this.loginbutton = page.locator('//span[text()="Einloggen"]');
         this.submit = page.locator('//button[text()="Einloggen"]');
+        this.title = page.locator('//label[text()="Ihre E-Mail"]');
         this.email = page.locator('//input[@placeholder="E-Mail-Adresse"]');
         this.password = page.locator('//input[@type="password"]');
         this.clickfurther = page.locator('//button[text()="Weiter"]');
@@ -38,7 +39,7 @@ export class LoginPage {
     async emailValidation(invalidEmail){
         await this.loginbutton.click();
         await this.email.fill(invalidEmail);
-        await this.clickfurther.click();
+        await this.title.click();
         await expect(this.emailError).toBeVisible();
     }
     async passwordValidation(Email, invalidPass){

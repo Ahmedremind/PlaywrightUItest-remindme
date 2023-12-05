@@ -25,8 +25,7 @@ jobs:
         run: |
           npm install
           npx playwright install  # Add this line to install browsers
-        working-directory: PlaywrightUItest-remindme
+        
 
       - name: Run Playwright tests
         run: npm test
-        working-directory: PlaywrightUItest-remindme/tests

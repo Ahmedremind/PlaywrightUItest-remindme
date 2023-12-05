@@ -71,7 +71,7 @@ This framework was crafted based on Ahmed Ali's tutorial on building a Playwrigh
 ```javascript
 import { test } from '@playwright/test';
 import { Gassjourney } from '../pages/OfferCreation/GasOffer/gas';
-import userData from '../util/userdata.json';
+import data from '../util/data.json';
 import { getRandomEmail } from '../util/common';
 
 test.describe(' Offer creation Gas', () => {
@@ -124,7 +124,7 @@ test.describe(' Offer creation Gas', () => {
         await gas.clickonApartmentButton();
         await gas.clickonCheckSavingButton();
         await gas.clickonOnePersonSelection();
-        await gas.clickonZipcode(userData.Zipcode);
+        await gas.clickonZipcode(data.Zipcode);
         await gas.clickonAreaSelection();
     });
 
@@ -136,15 +136,15 @@ test.describe(' Offer creation Gas', () => {
         await gas.clickonApartmentButton();
         await gas.clickonCheckSavingButton();
         await gas.clickonOnePersonSelection();
-        await gas.clickonZipcode(userData.Zipcode);
+        await gas.clickonZipcode(data.Zipcode);
         await gas.clickonAreaSelection();
         await gas.clickonFurtherButton();
         await gas.clickonTariff();
         await gas.clickonFurtherButton();
         await gas.enterEmail(randomEmail);
         await gas.clickonFurtherButton();
-        await gas.enterPassword(userData.Password);
-        await gas.enterConfirmPassword(userData.ConfirmPassword);
+        await gas.enterPassword(data.Password);
+        await gas.enterConfirmPassword(data.ConfirmPassword);
         await gas.clickonFurtherButton();
     });
 

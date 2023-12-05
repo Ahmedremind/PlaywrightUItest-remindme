@@ -1,6 +1,6 @@
 import  test   from '@playwright/test';
 import  {Electricityjourney} from '../pages/OfferCreation/ElectricityOffer/electricity';
-import  userData from '../util/userdata.json';
+import  data from '../util/userdata.json';
 import { getRandomEmail } from '../util/common';
 
 test.describe(' Offer creation Electricity', () => {
@@ -53,7 +53,7 @@ test.describe(' Offer creation Electricity', () => {
         await elec.clickonApartmentButton();
         await elec.clickonCheckSavingButton();
         await elec.clickonOnePersonSelection();
-        await elec.clickonZipcode(userData.Zipcode);
+        await elec.clickonZipcode(data.Zipcode);
         await elec.clickonAreaSelection();
     });
 
@@ -65,15 +65,15 @@ test.describe(' Offer creation Electricity', () => {
         await elec.clickonElectricityButton();
         await elec.clickonApartmentButton();
         await elec.clickonCheckSavingButton();
-        await elec.clickonZipcode(userData.Zipcode);
+        await elec.clickonZipcode(data.Zipcode);
         await elec.clickonAreaSelection();
         await elec.clickonFurtherButton();
         await elec.clickonTariff();
         await elec.clickonFurtherButton();
         await elec.enterEmail(randomEmail);
         await elec.clickonFurtherButton();
-        await elec.enterPassword(userData.Password);
-        await elec.enterConfirmPassword(userData.ConfirmPassword);
+        await elec.enterPassword(data.Password);
+        await elec.enterConfirmPassword(data.ConfirmPassword);
         await elec.clickonFurtherButton();
     });
 

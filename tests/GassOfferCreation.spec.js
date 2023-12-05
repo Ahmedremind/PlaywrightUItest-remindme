@@ -1,6 +1,8 @@
 import { test } from '@playwright/test';
 import { Gassjourney } from '../pages/OfferCreation/GasOffer/gas';
 import { getRandomEmail } from '../util/common';
+import data from '../util/userdata.json';
+
 
 test.describe(' Offer creation Gas', () => {
     test(' C1 -- Verify User Ability to Successfully Select the Gas Button.', async ({ page }) => {
@@ -52,7 +54,7 @@ test.describe(' Offer creation Gas', () => {
         await gas.clickonApartmentButton();
         await gas.clickonCheckSavingButton();
         await gas.clickonOnePersonSelection();
-        await gas.clickonZipcode(userData.Zipcode);
+        await gas.clickonZipcode(data.Zipcode);
         await gas.clickonAreaSelection();
     });
 
@@ -64,15 +66,15 @@ test.describe(' Offer creation Gas', () => {
         await gas.clickonApartmentButton();
         await gas.clickonCheckSavingButton();
         await gas.clickonOnePersonSelection();
-        await gas.clickonZipcode(userData.Zipcode);
+        await gas.clickonZipcode(data.Zipcode);
         await gas.clickonAreaSelection();
         await gas.clickonFurtherButton();
         await gas.clickonTariff();
         await gas.clickonFurtherButton();
         await gas.enterEmail(randomEmail);
         await gas.clickonFurtherButton();
-        await gas.enterPassword(userData.Password);
-        await gas.enterConfirmPassword(userData.ConfirmPassword);
+        await gas.enterPassword(data.Password);
+        await gas.enterConfirmPassword(data.ConfirmPassword);
         await gas.clickonFurtherButton();
     });
 

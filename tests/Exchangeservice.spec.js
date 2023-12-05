@@ -1,12 +1,12 @@
 import {test}   from '@playwright/test';
 import {ExchangeServicesJourney} from '../pages/ChangesService/YourOffer';
-import userData from '../util/userdata.json';
+import data from '../util/userdata.json';
 
 test.describe(' Change Servic Gas', () => {
     test(' Verify User can create the offer Creation of Gass conenction', async ({ page }) => {
         const exchange = new ExchangeServicesJourney(page);
         await exchange.gotoremindme();
-        await exchange.loginUser(userData.Email,userData.Password);
+        await exchange.loginUser(data.Email,data.Password);
         await exchange.clickonViewOffer();
         await exchange.clickonofferDetails();
         await exchange.clickonCreateFreeExchange();
@@ -23,17 +23,17 @@ test.describe(' Change Servic Gas', () => {
         await exchange.clickonFurtherButton();
         await exchange.clickonFurtherButton();
         await exchange.choseGender();
-        await exchange.fillFirstname(userData.FirstName);
-        await exchange.fillLasttname(userData.LastName);
-        await exchange.fillDay(userData.Day);
-        await exchange.fillMonth(userData.Month);
-        await exchange.fillYear(userData.Year);
-        await exchange.fillStreetName(userData.StreetName);
-        await exchange.fillHouseNumber(userData.House);
-        await exchange.fillPhoneNumber(userData.PhoneNumber);
+        await exchange.fillFirstname(data.FirstName);
+        await exchange.fillLasttname(data.LastName);
+        await exchange.fillDay(data.Day);
+        await exchange.fillMonth(data.Month);
+        await exchange.fillYear(data.Year);
+        await exchange.fillStreetName(data.StreetName);
+        await exchange.fillHouseNumber(data.House);
+        await exchange.fillPhoneNumber(data.PhoneNumber);
         await exchange.clickonFurtherButton();
         await exchange.clickonFurtherButton();
-        await exchange.ibanNumber(userData.Iban);
+        await exchange.ibanNumber(data.Iban);
         await exchange.clickonFurtherButton();
         await exchange.clickonFurtherButton();
         await exchange.autoSignaturebutton();

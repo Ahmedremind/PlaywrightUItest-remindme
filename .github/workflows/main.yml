@@ -23,8 +23,5 @@ jobs:
 
       - name: Install dependencies
         run: npm install
-        working-directory: /home/runner/work/PlaywrightUItest-remindme/PlaywrightUItest-remindme/Ahmedremind/PlaywrightUItest-remindme
-
       - name: Run Playwright tests
         run: npm test
-        working-directory: /home/runner/work/PlaywrightUItest-remindme/PlaywrightUItest-remindme/Ahmedremind/PlaywrightUItest-remindme/tests

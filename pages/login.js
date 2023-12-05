@@ -6,6 +6,7 @@ export class LoginPage {
     constructor(page) {
         this.page = page;
         this.loginbutton = page.locator('//span[text()="Einloggen"]');
+        this.submit = page.locator('//button[text()="Einloggen"]');
         this.email = page.locator('//input[@placeholder="E-Mail-Adresse"]');
         this.password = page.locator('//input[@type="password"]');
         this.clickfurther = page.locator('//button[text()="Weiter"]');
@@ -17,6 +18,11 @@ export class LoginPage {
         const { baseURL } = this.page.context()._options;
        // await this.page.goto(`${baseURL}`);
         await this.page.goto('https://www.remind.me/');
+        // Function to accept cookies
+        const acceptCookiesButton = await this.page.waitForSelector('(//button[text()="Alle Akzeptieren"])');
+        if (acceptCookiesButton) {
+        await acceptCookiesButton.click();
+    }
         
     }
 
@@ -40,6 +46,7 @@ export class LoginPage {
         await this.email.fill(Email);
         await this.clickfurther.click();
         await this.password.fill(invalidPass);
+        await this.submit.click();
         await expect(this.passError).toBeVisible();
     }
 

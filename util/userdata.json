@@ -3,6 +3,7 @@
     "PhoneNumber": "87552542118121",
     "Password": "Pakistan@1234",
     "ConfirmPassword": "Pakistan@1234",
+    "invalidConfirmpassword": "Pakistan@12346",
     "Zipcode": "10115",
     "FirstName" : "QATest",
     "LastName" : "QATestlastname",

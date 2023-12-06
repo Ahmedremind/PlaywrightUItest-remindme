@@ -1,7 +1,6 @@
 import { test } from '@playwright/test';
 import { LoginPage } from '../pages/login';
 import data from '../util/userdata.json';
-import { getRandomEmail } from '../util/common';
 
 
 test.describe(' Login Sceanrio', () => {

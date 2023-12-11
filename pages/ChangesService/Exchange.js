@@ -39,8 +39,8 @@ export class ExchangeServicesJourney {
         this.gassConnectionForm_phoneNumber = page.locator('//input[@placeholder="Telefonnummer"]');
         this.iban = page.locator('//input[@placeholder="IBAN"]');
         this.autoSignature = page.locator('(//input[@name="same_as_delivery"])[2]');
-        this.home_postalCode = page.locator('//input[@placeholder="z.B. 10115"]');
-        this.home_areaSelectionfeild = page.getByPlaceholder('z. B. Berlin');
+        this.home_postalCode = page.locator('//input[@placeholder="PLZ"]');
+        this.home_areaSelectionfeild = page.locator('//input[@placeholder="Ort"]');
         this.home_postalcode_city_selection = page.getByRole('option', { name: 'Berlin / Mitte' });
         this.home_ecotariff= page.locator('//span[text()="Alle Tarife"]');
 

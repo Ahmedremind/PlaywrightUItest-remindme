@@ -12,20 +12,17 @@ test.describe(' Change Servic Gas', () => {
     
         await exchange.clickoncheaperProvider();
         await exchange.clickonFurtherButton();
-        await exchange.clickonHouseebutton();
+        await exchange.clickonFurtherButton();
         await exchange.clickonFurtherButton();
         //
         await exchange.clickonZipcode(data.Zipcode);
         await exchange.clickonAreaSelection();
         await exchange.clickonFurtherButton();
-        await exchange.clickonTariff();
-        await exchange.clickonFurtherButton();
-        //
-       
         await exchange.clickonFurtherButton();
         await exchange.clickonFurtherButton();
         await exchange.clickonFurtherButton();
         await exchange.clickonFurtherButton();
+    
         await exchange.choseGender();
         await exchange.fillFirstname(data.FirstName);
         await exchange.fillLasttname(data.LastName);

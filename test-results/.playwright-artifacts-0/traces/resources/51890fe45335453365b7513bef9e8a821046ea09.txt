@@ -1,3 +1,0 @@
-{"sent_at":"2023-12-11T11:25:36.288Z","sdk":{"name":"sentry.javascript.react","version":"7.51.2"}}
-{"type":"session"}
-{"sid":"e5e158392dbe4b61ad9bf667a9579fa6","init":true,"started":"2023-12-11T11:25:36.287Z","timestamp":"2023-12-11T11:25:36.287Z","status":"ok","errors":0,"attrs":{"release":"c30c957276e5c5c23416dc761b6018023d5e636e","environment":"prod-remindmeApp","user_agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.6099.28 Safari/537.36"}}

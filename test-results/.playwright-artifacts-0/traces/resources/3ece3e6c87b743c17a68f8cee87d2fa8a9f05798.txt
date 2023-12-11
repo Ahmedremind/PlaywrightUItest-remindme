@@ -1,1 +1,0 @@
-{"cid":"10043203","pid":"10044420","time":1702293937997,"s":"ts","seg":{"browser":"CH","devices":["DESK"],"source":"direct","campaign":"","new":1,"ctry":"PK","cust":[]},"vid":"1702293934332-0.1498631780918036","ev":[{"evt":"hitGoal","goals":["100424137"],"vars":[100496350],"exps":["100438188"]}]}

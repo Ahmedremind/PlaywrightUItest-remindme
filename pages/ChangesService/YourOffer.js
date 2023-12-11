@@ -2,7 +2,7 @@ const { expect } = require('@playwright/test');
 const { chromium } = require('playwright');
 const { keyboard } = require('@playwright/test');
 
-export class ExchangeServicesJourney {
+export class YourOfferJourney {
 
     constructor(page) {
         this.page = page;

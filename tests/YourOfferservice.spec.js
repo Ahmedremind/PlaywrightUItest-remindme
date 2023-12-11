@@ -16,6 +16,8 @@ test.describe(' Change Servic Gas', () => {
         await exchange.clickonFurtherButton();
         //await exchange.clickonSize();
         await exchange.clickonFurtherButton();
+
+        
         await exchange.clickonFurtherButton();
         await exchange.clickonEcotariff();
         await exchange.clickonFurtherButton();

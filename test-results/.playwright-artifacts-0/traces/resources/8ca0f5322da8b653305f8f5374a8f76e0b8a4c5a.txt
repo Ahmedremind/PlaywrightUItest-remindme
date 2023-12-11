@@ -1,0 +1,2 @@
+en=gtm.click&_et=3
+en=gtm.linkClick&_et=366

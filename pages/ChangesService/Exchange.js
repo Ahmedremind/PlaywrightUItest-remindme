@@ -10,9 +10,10 @@ export class ExchangeServicesJourney {
         this.email = page.locator('//input[@placeholder="E-Mail-Adresse"]');
         this.password = page.locator('//input[@type="password"]');
         this.loginDetails = page.locator('//button[text()="Einloggen"]');
-        this.viewOffer = page.locator('//button[text()="Angebote ansehen"]');
-        this.offerDetail = page.locator('(//button[@type="button"])[2]');
-        this.createFreeexchange = page.locator('//button[text()="Kostenlosen Wechselservice anlegen"]');
+        this.viewexchangeService = page.locator('(//a[@href="/mein-remindme/wechselservices"])[2]');
+        this.applyPowerChange = page.locator('//button[text()="Stromwechsel anlegen"]');
+
+        //
         this.cheaperProvider = page.locator('//span[text()="Günstigerer Anbieter"]');
         this.firstOccupancy = page.locator('(//button[text()="Jetzt Sparpotential prüfen"])');
         this.relocation = page.locator('//span[text()="50m²"]');
@@ -38,8 +39,12 @@ export class ExchangeServicesJourney {
         this.gassConnectionForm_phoneNumber = page.locator('//input[@placeholder="Telefonnummer"]');
         this.iban = page.locator('//input[@placeholder="IBAN"]');
         this.autoSignature = page.locator('(//input[@name="same_as_delivery"])[2]');
-        this.confirmButton = page.locator('//button[text()="Bestätigen"]');
-        this.login = page.locator ('//span[text()="Einloggen"]');
+        this.home_postalCode = page.locator('//input[@placeholder="z.B. 10115"]');
+        this.home_areaSelectionfeild = page.getByPlaceholder('z. B. Berlin');
+        this.home_postalcode_city_selection = page.getByRole('option', { name: 'Berlin / Mitte' });
+        this.home_ecotariff= page.locator('//span[text()="Alle Tarife"]');
+
+        
        
     }
     async gotoremindme(){
@@ -53,24 +58,18 @@ export class ExchangeServicesJourney {
             await acceptCookiesButton.click();
         }
     }
-    
+
     async loginUser(Email,Password){
         await this.email.fill(Email);
         await this.clickfurther.click();
         await this.password.fill(Password);
         await this.loginDetails.click();
     }
-
-    async  clickonViewOffer(){
-        await this.viewOffer.click();
+    async  exchangeOfferView(){
+        await this.viewexchangeService.click();
     }
-
-    async  clickonofferDetails(){
-        await this.offerDetail.click();
-    }
-
-    async  clickonCreateFreeExchange(){
-        await this.createFreeexchange.click();
+    async  powerChange(){
+        await this.applyPowerChange.click();
     }
 
     async  clickoncheaperProvider(){
@@ -84,6 +83,18 @@ export class ExchangeServicesJourney {
         await this.housebuuton.click();
     }
 
+    async  clickonZipcode(Zipcode){
+        await this.home_postalCode.fill(Zipcode);
+        await this.home_postalCode.press('Enter');
+    }
+    async clickonAreaSelection() {
+        await this.home_areaSelectionfeild.click();
+        await this.home_postalcode_city_selection.click();
+    }
+
+    async clickonTariff() {
+        await this.home_ecotariff.click();
+    }
     async  clickonSize(){
         await this.size.isVisible();
         await this.size.click();

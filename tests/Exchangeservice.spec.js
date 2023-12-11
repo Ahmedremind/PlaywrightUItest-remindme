@@ -1,5 +1,5 @@
 import {test}   from '@playwright/test';
-import {ExchangeServicesJourney} from '../pages/ChangesService/YourOffer';
+import {ExchangeServicesJourney} from '../pages/ChangesService/Exchange';
 import data from '../util/userdata.json';
 
 test.describe(' Change Servic Gas', () => {
@@ -7,17 +7,21 @@ test.describe(' Change Servic Gas', () => {
         const exchange = new ExchangeServicesJourney(page);
         await exchange.gotoremindme();
         await exchange.loginUser(data.Email,data.Password);
-        await exchange.clickonViewOffer();
-        await exchange.clickonofferDetails();
-        await exchange.clickonCreateFreeExchange();
+        await exchange.exchangeOfferView();
+        await exchange.powerChange();
+    
         await exchange.clickoncheaperProvider();
         await exchange.clickonFurtherButton();
         await exchange.clickonHouseebutton();
         await exchange.clickonFurtherButton();
-        //await exchange.clickonSize();
+        //
+        await exchange.clickonZipcode(data.Zipcode);
+        await exchange.clickonAreaSelection();
         await exchange.clickonFurtherButton();
+        await exchange.clickonTariff();
         await exchange.clickonFurtherButton();
-        await exchange.clickonEcotariff();
+        //
+       
         await exchange.clickonFurtherButton();
         await exchange.clickonFurtherButton();
         await exchange.clickonFurtherButton();

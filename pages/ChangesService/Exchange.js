@@ -12,7 +12,6 @@ export class ExchangeServicesJourney {
         this.loginDetails = page.locator('//button[text()="Einloggen"]');
         this.viewexchangeService = page.locator('(//a[@href="/mein-remindme/wechselservices"])[2]');
         this.applyPowerChange = page.locator('//button[text()="Stromwechsel anlegen"]');
-
         //
         this.cheaperProvider = page.locator('//span[text()="Günstigerer Anbieter"]');
         this.firstOccupancy = page.locator('(//button[text()="Jetzt Sparpotential prüfen"])');

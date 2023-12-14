@@ -1,0 +1,1 @@
+{"cid":"10043203","pid":"10044420","time":1702459447147,"s":"ts","seg":{"browser":"CH","devices":["DESK"],"source":"direct","campaign":"","new":1,"ctry":"PK","cust":[]},"vid":"1702459447126-0.3353377398719617","ev":[{"evt":"tv"},{"evt":"viewExp","exps":["100438188"],"vars":["100496349"]}]}

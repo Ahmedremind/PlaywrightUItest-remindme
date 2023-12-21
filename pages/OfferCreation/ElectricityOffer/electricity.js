@@ -7,6 +7,7 @@ export class Electricityjourney {
     constructor(page) {
         this.page = page;
         this.acceptCookies = page.locator('(//font[text()="Accept all"])[2]');
+        this.resch = page.locator('(//font[text()="Accept all"])[2]');
         this.home_electricity = page.locator('//span[text()="Strom"]');
         this.home_house = page.locator('(//span[text()="Haus"])');
         this.home_apartment = page.locator('(//span[text()="Wohnung"])');
